@@ -28,4 +28,4 @@ def get_voice():
 	
 
 if __name__ == '__main__':
-    voice_app.run(debug=True)
+    voice_app.run(host='0.0.0.0')

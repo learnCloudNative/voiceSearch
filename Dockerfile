@@ -1,12 +1,12 @@
-FROM continuumio/anaconda
+FROM python:3.7
 WORKDIR /app
 COPY . /app
-RUN conda install -c anaconda portaudio
-RUN conda install -c anaconda pyaudio
-RUN conda install -c conda-forge speechrecognition
-RUN conda install -c conda-forge flask 
-RUN conda install -c conda-forge flask-cors
-RUN conda install -c conda-forge requests
+RUN pip install  portaudio
+RUN pip install pyaudio
+RUN pip install speechrecognition
+RUN pip install flask 
+RUN pip install flask-cors
+RUN pip install requests
 EXPOSE 5000
-ENV FLASK_APP /app/app.py
+ENV FLASK_APP /app/voice_app.py
 CMD flask run --host=0.0.0.0

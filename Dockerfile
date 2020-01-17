@@ -10,7 +10,7 @@ RUN apt-get install -y libportaudio2
 RUN apt-get install -y libportaudiocpp0
 RUN apt-get install -y ffmpeg 
 RUN apt-get install -y python-pyaudio
-RUN pip-install PyAudio
+RUN pip install PyAudio
 RUN pip install speechrecognition
 RUN pip install flask 
 RUN pip install -U flask-cors
